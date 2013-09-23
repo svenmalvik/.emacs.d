@@ -21,5 +21,4 @@
 
 (global-hl-line-mode 1)
  
-;; To customize the background color
-(set-face-background 'hl-line "#111111")  ;; Emacs 22 Only
+(set-face-background 'hl-line "#111111")  i
