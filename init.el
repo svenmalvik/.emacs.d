@@ -30,3 +30,4 @@
                                 (interactive)
                                 (other-window -1)))
 (global-unset-key [up])
+(global-unset-key [down])
