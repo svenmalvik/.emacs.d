@@ -21,4 +21,9 @@
 
 (global-hl-line-mode 1)
  
-(set-face-background 'hl-line "#111111")  i
+(set-face-background 'hl-line "#111111") 
+
+(global-set-key "\M-7" 'paredit-open-square)
+(global-set-key "\M-8" 'paredit-close-square)
+(global-set-key "\M-?" 'delete-backward-char)
+
