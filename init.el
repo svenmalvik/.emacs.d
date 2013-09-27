@@ -31,3 +31,11 @@
                                 (other-window -1)))
 (global-unset-key [up])
 (global-unset-key [down])
+
+(defun init-windows()
+	(split-window-horizontally)
+	(other-window 1)
+	(eshell)
+)
+
+(init-windows)
