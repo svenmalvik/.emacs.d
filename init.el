@@ -26,6 +26,7 @@
 (global-set-key [f12] 'kill-whole-line)
 (global-set-key [f11] 'undo)
 (global-set-key [right] 'other-window)
+(global-set-key (kbd "C-x 1") 'delete-window)
 (global-set-key [left] (lambda ()
                                 (interactive)
                                 (other-window -1)))
