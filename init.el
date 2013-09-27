@@ -16,9 +16,17 @@
 	  (when (not (package-installed-p p))
 	        (package-install p)))
 
+(global-hl-line-mode 1)
+ 
+(set-face-background 'hl-line "#111111")  
+
 (global-linum-mode t)
 (setq linum-format "%3d ")
 
-(global-hl-line-mode 1)
- 
-(set-face-background 'hl-line "#111111")  i
+(global-set-key [f12] 'kill-whole-line)
+(global-set-key [f11] 'undo)
+(global-set-key [right] 'other-window)
+(global-set-key [left] (lambda ()
+                                (interactive)
+                                (other-window -1)))
+(global-unset-key [up])
