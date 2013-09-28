@@ -5,12 +5,12 @@
 
 
 (defvar my-packages '(	starter-kit
-		       	starter-kit-lisp
-			starter-kit-bindings
-			starter-kit-eshell
-			clojure-mode
-			clojure-test-mode
-			nrepl))
+						starter-kit-lisp
+						starter-kit-bindings
+						starter-kit-eshell
+						clojure-mode
+						clojure-test-mode
+						nrepl))
 
 (dolist (p my-packages)
 	  (when (not (package-installed-p p))
@@ -18,12 +18,29 @@
 
 (global-linum-mode t)
 (setq linum-format "%3d ")
-
-(global-hl-line-mode 1)
- 
+(global-hl-line-mode 1) 
 (set-face-background 'hl-line "#111111") 
 
 (global-set-key "\M-7" 'paredit-open-square)
 (global-set-key "\M-8" 'paredit-close-square)
 (global-set-key "\M-?" 'delete-backward-char)
+
+
+(global-set-key [f12] 'kill-whole-line)
+(global-set-key [f11] 'undo)
+(global-set-key [right] 'other-window)
+(global-set-key (kbd "C-x 1") 'delete-window)
+(global-set-key [left] (lambda ()
+                                (interactive)
+                                (other-window -1)))
+(global-unset-key [up])
+(global-unset-key [down])
+(global-set-key (kbd "C-h") 'delete-backward-char)
+
+(defun init-windows()
+	(split-window-horizontally)
+	(other-window 1)
+	(shell))
+
+(init-windows)
 
