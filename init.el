@@ -1,16 +1,18 @@
 (require 'package)
+(require 'recentf)
 (add-to-list 'package-archives
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 
 (defvar my-packages '(	starter-kit
-						starter-kit-lisp
-						starter-kit-bindings
-						starter-kit-eshell
-						clojure-mode
-						clojure-test-mode
-						nrepl))
+			starter-kit-bindings
+			starter-kit-lisp
+                        scala-mode
+			clojure-mode
+                        clojure-test-mode
+                        starter-kit-eshell
+			nrepl))
 
 (dolist (p my-packages)
 	  (when (not (package-installed-p p))
@@ -37,10 +39,32 @@
 (global-unset-key [down])
 (global-set-key (kbd "C-h") 'delete-backward-char)
 
+(defun move-line-up ()
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(global-set-key "\M-+" 'move-line-up)
+(global-set-key "\M--" 'move-line-down)
+;;(global-set-key "\M-s" 'shell)
+
 (defun init-windows()
 	(split-window-horizontally)
 	(other-window 1)
-	(shell))
+	(recentf-open-files))
+
+(recentf-mode 1)
+(setq recentf-max-menu-items 40)
+(global-set-key  (kbd "C-x C-r")  'recentf-open-files)
 
 (init-windows)
+
 
