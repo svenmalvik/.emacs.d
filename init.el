@@ -70,7 +70,7 @@
 (set-face-attribute  'mode-line
                  nil 
                  :foreground "gray80"
-                 :background "#ff0000" 
+                 :background "gray25" 
                  :box '(:line-width 1 :style released-button))
 (set-face-attribute  'mode-line-inactive
                  nil 
