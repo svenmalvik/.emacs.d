@@ -67,6 +67,8 @@
 
 (init-windows)
 
+(load-theme 'zenburn t)
+
 (set-face-attribute  'mode-line
                  nil 
                  :foreground "gray80"
