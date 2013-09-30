@@ -71,12 +71,12 @@
 
 (set-face-attribute  'mode-line
                  nil 
-                 :foreground "gray80"
-                 :background "#ff0000" 
+                 :foreground "blue"
+                 :background "gray80" 
                  :box '(:line-width 1 :style released-button))
 (set-face-attribute  'mode-line-inactive
                  nil 
-                 :foreground "gray30"
-                 :background "#fcfcfc" 
+                 :foreground "white"
+                 :background "black" 
                  :box '(:line-width 1 :style released-button))
 
