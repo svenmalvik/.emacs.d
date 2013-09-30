@@ -69,14 +69,5 @@
 
 (load-theme 'zenburn t)
 
-(set-face-attribute  'mode-line
-                 nil 
-                 :foreground "blue"
-                 :background "gray80" 
-                 :box '(:line-width 1 :style released-button))
-(set-face-attribute  'mode-line-inactive
-                 nil 
-                 :foreground "white"
-                 :background "black" 
-                 :box '(:line-width 1 :style released-button))
+
 
