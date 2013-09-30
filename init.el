@@ -67,4 +67,14 @@
 
 (init-windows)
 
+(set-face-attribute  'mode-line
+                 nil 
+                 :foreground "gray80"
+                 :background "#ff0000" 
+                 :box '(:line-width 1 :style released-button))
+(set-face-attribute  'mode-line-inactive
+                 nil 
+                 :foreground "gray30"
+                 :background "#fcfcfc" 
+                 :box '(:line-width 1 :style released-button))
 
